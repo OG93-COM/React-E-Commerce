@@ -15,7 +15,9 @@ export const sliderSlice = createSlice({
         prevSlide:(state,action) => {
             state.value = action.payload <= 0 ? state.length : action.payload - 1;
         },
-        dotSlide(){}
+        dotSlide:(state,action)=>{
+            state.value = action.payload
+        }
     }
 })
 
