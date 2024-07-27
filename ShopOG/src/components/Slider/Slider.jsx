@@ -30,19 +30,19 @@ const Slider = () => {
         <div className="relative bottom-10 gap-2 flex justify-center items-center">
             <div
             onClick={()=> {dispatch(dotSlide(0))}}
-            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 ${slideIndex === 0 ? "bg-blue-800" : "bg-white"}`}></div>
+            className={`cursor-pointer rounded-full w-3 h-3 opacity-70 hover:scale-110 ${slideIndex === 0 ? "bg-blue-800" : "bg-white"}`}></div>
             <div
             onClick={()=> {dispatch(dotSlide(1))}}
-            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 ${slideIndex === 1 ? "bg-blue-800" : "bg-white"}`}></div>
+            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 hover:scale-110 ${slideIndex === 1 ? "bg-blue-800" : "bg-white"}`}></div>
             <div
             onClick={()=> {dispatch(dotSlide(2))}}
-            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 ${slideIndex === 2 ? "bg-blue-800" : "bg-white"}`}></div>
+            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 hover:scale-110 ${slideIndex === 2 ? "bg-blue-800" : "bg-white"}`}></div>
             <div
             onClick={()=> {dispatch(dotSlide(3))}}
-            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 ${slideIndex === 3 ? "bg-blue-800" : "bg-white"}`}></div>
+            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 hover:scale-110 ${slideIndex === 3 ? "bg-blue-800" : "bg-white"}`}></div>
             <div
             onClick={()=> {dispatch(dotSlide(4))}}
-            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 ${slideIndex === 4 ? "bg-blue-800" : "bg-white"}`}></div>
+            className={`cursor-pointer rounded-full  w-3 h-3 opacity-70 hover:scale-110 ${slideIndex === 4 ? "bg-blue-800" : "bg-white"}`}></div>
         </div>
 
     </div>
