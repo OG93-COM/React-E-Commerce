@@ -4,13 +4,13 @@ import Slider from './Slider/Slider'
 import NavigateButton from './NavigateButton'
 
 const Main = () => {
-  return (
-    <div>
-        <Nav/>
-        <Slider/>
-        <NavigateButton/>
-    </div>
-  )
+    return (
+        <div>
+            <Nav />
+            <Slider />
+            <NavigateButton />
+        </div>
+    )
 }
 
 export default Main
