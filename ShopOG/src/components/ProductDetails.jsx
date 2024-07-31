@@ -28,7 +28,9 @@ const ProductDetails = () => {
                             <p className='text-blue-900 font-inter pr-10'>{produc.price} $</p>
                         </div>
                         <p className='pb-4 font-normal'>{produc.text}</p>
-                        <Select
+                        
+                        {produc?.size?.length != 0 &&
+                            <Select
                             label="Select Size"
                             value={value}
                             onChange={(val) => setValue(val)}
@@ -38,6 +40,7 @@ const ProductDetails = () => {
                             ))}
 
                         </Select>
+                        }
                         <Tooltip content="Add To Card" >
                             <Button
                             className="mt-3  w-full" color='gray' size='sm' variant='outlined' 

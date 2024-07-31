@@ -12,12 +12,12 @@ import { detailsproducts } from "../features/products";
 
 
 
-const ProductCard = ({ img, title, description, price, id}) => {
+const ProductCard = ({ img, title, description, price, id }) => {
   const dispatch = useDispatch()
-  const {type} = useParams()
+  const { type } = useParams()
   return (
     <Link to={`/filtredProduct/${type}/${id}`}>
-      <Card className="w-96" onClick={()=> dispatch(detailsproducts(id))}>
+      <Card className="w-96" onClick={() => dispatch(detailsproducts(id))}>
         <CardHeader shadow={false} floated={false} className="h-96">
           <img
             src={img}
