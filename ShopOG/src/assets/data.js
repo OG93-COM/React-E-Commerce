@@ -11,8 +11,8 @@ export const storeData = [
       name: "C4 Carbon",
       text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
       type: "Fins",
-      size: ["XL", "L", "M", "S"],
-      price: 45,
+      size: ["39-41", "41-43", "43-45"],
+      price: 345,
     },
     {
       id: "2",
@@ -20,8 +20,8 @@ export const storeData = [
       name: "Beuchat Carbon Monadial",
       text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
       type: "Fins",
-      size: ["M", "L", "XL"],
-      price: 55,
+      size: ["39-41", "41-43", "43-45"],
+      price: 255,
     },
     {
       id: "3",
@@ -29,7 +29,7 @@ export const storeData = [
       name: "Cressi Glass",
       text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
       type: "Masks",
-      size: ["L", "XL"],
+      size: [],
       price: 75,
     },
     {
@@ -38,8 +38,8 @@ export const storeData = [
       name: "F8 2019",
       text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
       type: "Flashlight",
-      size: ["M", "L", "XL"],
-      price: 25,
+      size: [],
+      price: 105,
     },
     {
       id: "5",
@@ -47,8 +47,8 @@ export const storeData = [
       name: "Hypselon Miroir",
       text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
       type: "Masks",
-      size: ["M", "L", "XL"],
-      price: 15,
+      size: [],
+      price: 49,
     },
     {
         id: "6",
