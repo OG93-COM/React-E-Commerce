@@ -35,15 +35,15 @@ const Cart = ({ openModal, setOpen }) => {
                 {cart.length > 0 ? cart.map(item => (
                     <div key={item.id}>
 
-                        <DialogBody className="flex justify-start items-center gap-5">
+                        <DialogBody className="flex justify-start items-center gap-5 rounded-lg border m-1">
                             <img src={item.img} className="w-16 hover:shadow-md rounded-lg border mx-2 p-1" />
-                            <p className="text-lg font-inter text-black">{item.name}</p>
-                            <div>
-                            <span className="mx-2 font-inter text-base text-blue-800">{item.price}$</span>
-                            <p className="text-sm font-inter text-black">Qte {item.amount}</p>
+                            <p className="text-lg font-inter text-black w-56">{item.name}</p>
+                            <div className="w-20">
+                            <p className="text-xs font-inter text-black">Qte {item.amount}</p>
+                            <span className="mx-2 font-inter text-xs text-blue-800">{item.price}$</span>
                             </div>
-                            <span className="mx-2 font-inter text-base text-blue-800">{item.price * item.amount}$</span>
-                            <Button color="red" className="text-xs right-0">Remove</Button>
+                            <span className="mx-2 font-inter text-base text-green-800 w-20">{item.price * item.amount}$</span>
+                            <Button color="red" className="text-xs right-0 w-24">Remove</Button>
                         </DialogBody>
                     </div>
                 )) : <DialogHeader>No Product Selected</DialogHeader>}
