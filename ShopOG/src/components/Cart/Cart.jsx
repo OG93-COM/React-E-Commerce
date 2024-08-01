@@ -31,9 +31,8 @@ const Cart = ({ openModal, setOpen }) => {
             >
                 {cart.length > 0 ? cart.map(item => (
                     <div key={item.id}>
-                        
                         <DialogHeader>
-                            <img src={item.img} className="w-16 hover:shadow-md rounded-lg border mx-2 p-1"/>
+                            <img src={item.img} className="w-16 hover:shadow-md rounded-lg border mx-2 p-1" />
                             {item.name}
                             <span className="mx-2 font-inter text-base text-blue-800">{item.price}$</span>
                         </DialogHeader>
@@ -41,8 +40,7 @@ const Cart = ({ openModal, setOpen }) => {
                     </div>
                 )) : <DialogHeader>No Product Selected</DialogHeader>}
 
-
-                <DialogFooter className="font-inter text-black">Total Price : {totalPrice}$</DialogFooter>
+                {cart.length > 0 && <DialogFooter className="font-inter text-black">Total Price : {totalPrice}$</DialogFooter>}
             </Dialog>
         </>
     )
