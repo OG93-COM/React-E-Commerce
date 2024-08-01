@@ -8,7 +8,6 @@ import ProductCard from './ProductCard';
 const Main = () => {
     return (
         <div>
-            <Nav />
             <Slider />
             <NavigateButton />
             <div className='flex justify-center items-center m-2 p-2 flex-wrap gap-3'>
