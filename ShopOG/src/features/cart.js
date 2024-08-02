@@ -44,13 +44,13 @@ export const cartSlice = createSlice({
         removeFromCart:(state,action)=> {
             const productId = action.payload;
       try {
-        const exist = state.cartList.find(
+        const exist = state.cartList?.find(
           (product) =>
             product.id === productId.id &&
             product.size === productId.size
         );
         if (exist.amount === 1) {
-            state.cart = state.cart.filter(
+            state.cartList = state.cartList?.filter(
               (product) =>
                 product.id !== productId.id ||
                 product.size !== productId.size
@@ -63,7 +63,7 @@ export const cartSlice = createSlice({
             state.totalAmount--;
             state.totalPrice -= productId.price;
 
-        } console.log(state.cartList)
+        }
       } catch (err) {
         return err;
       }

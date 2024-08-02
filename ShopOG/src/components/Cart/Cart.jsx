@@ -29,8 +29,8 @@ const Cart = ({ openModal, setOpen }) => {
                     unmount: { scale: 0.9, y: -100 },
                 }}
             >
-                <DialogHeader>Shopping Cart</DialogHeader>
-                {cart.length > 0 ? cart.map(item => (
+                <DialogHeader>🛒 Shopping Cart</DialogHeader>
+                {cart?.length > 0 ? cart?.map(item => (
                     <div key={item.id}>
 
                         <DialogBody className="flex justify-start items-center gap-3 rounded-lg border m-1">
@@ -49,7 +49,7 @@ const Cart = ({ openModal, setOpen }) => {
                             </div>
                         </DialogBody>
                     </div>
-                )) : <DialogHeader>No Product Selected</DialogHeader>}
+                )) : <DialogHeader className="text-md font-thin">No Product Selected Yet, Please add some article to the cart 🛒</DialogHeader>}
 
                 {cart.length > 0 && <DialogFooter className="font-normal text-left text-black">Total Price : {totalPrice}$</DialogFooter>}
             </Dialog>
