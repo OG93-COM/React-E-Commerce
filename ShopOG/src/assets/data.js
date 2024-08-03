@@ -17,7 +17,6 @@ export const storeData = [
       type: "Fins",
       size: ["39-41", "41-43", "43-45"],
       price: 345,
-      category:"Masks"
     },
     {
       id: "2",

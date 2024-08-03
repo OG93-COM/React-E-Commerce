@@ -10,12 +10,12 @@ import {
 import { useDispatch } from "react-redux";
 import { Link, useParams } from 'react-router-dom'
 import { detailsproducts } from "../features/products";
+import { storeData } from "../assets/data";
 
 
-
-const ProductCard = ({ img, title, description, price, id }) => {
+const ProductCard = ({ img, title, description, price, id , type}) => {
   const dispatch = useDispatch()
-  const { type } = useParams()
+
   return (
     <Link to={`/filtredProduct/${type}/${id}`}>
       <Card className="w-96 mt-3" onClick={() => dispatch(detailsproducts(id))}>

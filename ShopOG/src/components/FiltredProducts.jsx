@@ -15,7 +15,7 @@ const FiltredProducts = () => {
       <div className='flex justify-center items-center m-2 p-2 flex-wrap gap-3'>
         {filterState?.filter(prod => prod.type === type).map(product => (
           
-            <ProductCard key={product.id} img={product.img} title={product.name} description={product.text} price={product.price} id={product.id} />
+            <ProductCard key={product.id} img={product.img} title={product.name} description={product.text} price={product.price} id={product.id} type={product.type} />
         ))}
       </div>
 

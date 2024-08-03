@@ -8,11 +8,13 @@ import {
     Checkbox,
     Button,
 } from "@material-tailwind/react";
+import logImg from "../../assets/auth.png"
 
 const Login = () => {
     return (
         <div>
-            <Card className="w-96">
+            <Card className="w-96 my-16 mx-auto">
+            <img src={logImg} className="absolute"/>
                 <CardHeader
                     variant="gradient"
                     color="gray"
