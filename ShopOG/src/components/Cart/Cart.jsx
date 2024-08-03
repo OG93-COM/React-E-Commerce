@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from "../../features/cart";
+import { Link } from "react-router-dom";
 
 const Cart = ({ openModal, setOpen }) => {
     const cart = useSelector(state => state.cart.cartList)

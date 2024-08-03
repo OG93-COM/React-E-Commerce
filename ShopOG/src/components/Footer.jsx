@@ -5,6 +5,7 @@ import { useState } from "react";
 import Cart from "../features/cart";
 
 const Footer = () => {
+    const year = new Date().getFullYear()
 
     return (
         <footer className="w-full bg-white p-8">
@@ -34,7 +35,7 @@ const Footer = () => {
             <hr className="my-8 border-blue-gray-50" />
             <Typography color="blue-gray" className="text-center font-normal">
                 <Link to='https://www.OG93.com'>
-                &copy; 2024 OG93
+                &copy; {year} OG93
                 </Link>
             </Typography>
         </footer>

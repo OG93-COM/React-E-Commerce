@@ -4,17 +4,14 @@ import Slider from './Slider/Slider'
 import NavigateButton from './NavigateButton'
 import { storeData } from '../assets/data';
 import ProductCard from './ProductCard';
+import ProductSection from './ProductSection/ProductSection';
 
 const Main = () => {
     return (
-        <div>
+        <div className='flex flex-col justify-center items-center mx-auto'>
             <Slider />
             <NavigateButton />
-            <div className='flex justify-center items-center m-2 p-2 flex-wrap gap-3'>
-                {storeData.map(product  => (
-                    <ProductCard key={product.id} img={product.img} title={product.name} description={product.text} price={product.price} />
-                ))}
-            </div>
+            <ProductSection/>
         </div>
     )
 }

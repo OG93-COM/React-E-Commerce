@@ -28,7 +28,7 @@ const NavigateButton = () => {
             <div className='flex justify-center my-4'>
                 <p className='w-[400px] bg-blue-800 text-white rounded p-2 text-center'>Sale Up to 50%s</p>
             </div>
-            <FiltredProducts/>
+            
         </>
     )
 }
