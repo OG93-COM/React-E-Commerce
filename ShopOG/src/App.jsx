@@ -10,29 +10,29 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
 function App() {
-  const userState = useSelector( state => state.auth.user)
-  const {authUser} = userState
+  const userState = useSelector(state => state.auth.user)
+  const { authUser } = userState
   console.log(authUser)
   console.log(userState)
 
   const navigate = useNavigate()
-  useEffect(()=>{
-    if (authUser){
-        navigate('/')
+  useEffect(() => {
+    if (!authUser) {
+      navigate('/')
     }
-},[authUser])
+  }, [authUser])
 
   return (
     <>
-    <Nav/>
+      <Nav />
       <Routes>
-        <Route path='/' element={authUser ? <Main /> : <Login userState={userState}/>} />
+        <Route path='/' element={authUser ? <Main /> : <Login userState={userState} />} />
         <Route path='/filtredProduct/:type' element={<FiltredProducts />} />
         <Route path='/filtredProduct/:type/:id' element={<ProductDetails />} />
 
         <Route path='*' element={<NotFound />} />
       </Routes>
-    <Footer/>
+      <Footer />
     </>
   )
 }

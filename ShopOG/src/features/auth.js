@@ -13,7 +13,7 @@ export const authSlice = createSlice({
     reducers:{
        login:(state,action)=> {
             const userId = action.payload;
-            const userValidation = /^[A-Za-z]/.test(userId.name);
+            const userValidation = /^[A-Za-z-a-zA-Z0-9]/.test(userId.name);
             const passwordValidation =
             /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(
               userId.password
@@ -38,6 +38,7 @@ export const authSlice = createSlice({
             password:'',
             authUser:false
         }
+        state.user = userId
         sessionStorage.clear()
        },
     }
