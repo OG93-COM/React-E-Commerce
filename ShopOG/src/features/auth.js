@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const authSlice = createSlice({
     name:'auth',
     initialState: {
-        user: {
+        user: JSON.parse(sessionStorage.getItem("authUser")) || {
             name:'',
             password:'',
             authUser:false
@@ -13,8 +13,12 @@ export const authSlice = createSlice({
     reducers:{
        login:(state,action)=> {
             const userId = action.payload;
-            const userValidation = /^[A-Za-z]{4,10}$/i.test(userId.name);
-            const passwordValidation = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(userId.password);
+            const userValidation = /^[A-Za-z]/.test(userId.name);
+            const passwordValidation =
+            /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(
+              userId.password
+            );
+            console.log(userValidation + " " + passwordValidation)
             try {
                 state.user = userId
                 if(!userValidation || !passwordValidation){
@@ -29,7 +33,12 @@ export const authSlice = createSlice({
             }
        },
        logout:(state,action)=> {
-
+        const userId = {
+            name:'',
+            password:'',
+            authUser:false
+        }
+        sessionStorage.clear()
        },
     }
 })
