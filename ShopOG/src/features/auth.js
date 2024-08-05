@@ -6,7 +6,8 @@ export const authSlice = createSlice({
         user: JSON.parse(sessionStorage.getItem("authUser")) || {
             name:'',
             password:'',
-            authUser:false
+            authUser:false,
+            authError:false
         }
     },
     reducers:{
@@ -22,8 +23,10 @@ export const authSlice = createSlice({
                 state.user = userId
                 if(!userValidation || !passwordValidation){
                     state.user.authUser = false
+                    state.user.authError = "Please Verify Your Inputs"
                 } else {
                     state.user.authUser = true
+                    state.user.authError = null
                     const saveState = JSON.stringify(userId)
                     sessionStorage.setItem("authUser", saveState)
                 }

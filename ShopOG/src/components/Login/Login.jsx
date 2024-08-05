@@ -22,7 +22,7 @@ const Login = ({ userState }) => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setValues({ ...values, [name]: value })
-        console.log(values)
+        console.log(userState)
     }
     const dispatch = useDispatch()
 
@@ -48,18 +48,11 @@ const Login = ({ userState }) => {
                     <Button variant="gradient" color="blue" fullWidth onClick={() => dispatch(login(values))}>
                         Sign In
                     </Button>
-                    <Typography variant="small" className="mt-6 flex justify-center">
-                        Don&apos;t have an account?
-                        <Typography
-                            as="a"
-                            href="#signup"
-                            variant="small"
-                            color="blue-gray"
-                            className="ml-1 font-bold"
-                        >
-                            Sign up
-                        </Typography>
-                    </Typography>
+
+                    {userState.authError &&
+                        <Typography variant="small" color="red" className="mt-6 flex justify-center">
+                            {userState.authError}
+                        </Typography>}
                 </CardFooter>
             </Card>
         </div>
