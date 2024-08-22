@@ -5,8 +5,6 @@ import Cart from '../Cart/Cart.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../features/auth'
 
-
-
 const Nav = () => {
     const [open, setOpen] = useState(false)
     const handleOpen = () => setOpen(!open)
