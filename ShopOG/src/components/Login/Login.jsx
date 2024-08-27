@@ -8,10 +8,9 @@ import {
     Checkbox,
     Button,
 } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/auth";
-import { useNavigate } from "react-router-dom";
 
 const Login = ({ userState }) => {
     const initialState = {
