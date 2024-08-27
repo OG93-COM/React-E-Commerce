@@ -5,7 +5,6 @@ import {
     CardFooter,
     Typography,
     Input,
-    Checkbox,
     Button,
 } from "@material-tailwind/react";
 import { useState } from "react";
